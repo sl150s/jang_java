@@ -8,8 +8,5 @@ public class MainClass01 {
 		Student s1 = new Student();
 		
 		s1.study();
-		
-		int a= 0; 
-		
 	}
 }
