@@ -15,21 +15,21 @@ public class MainClass04 {
 		
 		
 		//random 객체를 생성해서
-		Random ran = new Random();
+		Random random = new Random();
 		
 		//nextInt() 메소드를 호출해서 정수 하나를 리턴 받아서
-		int num = ran.nextInt(0, 10);
+		int num = random.nextInt(0, 10);
 		
 		//콘솔창에 출력해보기
 		System.out.println(num);
 		
 		
 		//1~45 사이의 랜덤한 정수 하나를 얻어내서 ranNum2 라는 지역 변수에 담아보세요,
-		int ranNum2 = ran.nextInt(1,46); //1이상, 46 미만
+		int ranNum2 = random.nextInt(1,46); //1이상, 46 미만
 		System.out.println(ranNum2);
 
 		//true or false 중에 랜덤한 boolean 값을 얻어내서 isRun이라는 지역 변수에 담아보세요. 
-		boolean isRun = ran.nextBoolean();
+		boolean isRun = random.nextBoolean();
 		System.out.println(isRun);
 
 //		System.out.println("0부터 N까지 무작위 랜덤 숫자 : " + random.nextInt(100));
