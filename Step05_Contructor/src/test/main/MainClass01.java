@@ -9,5 +9,7 @@ public class MainClass01 {
 		
 		s1.study();
 		
+		int a= 0; 
+		
 	}
 }
