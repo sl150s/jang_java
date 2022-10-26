@@ -25,13 +25,10 @@ public class MainClass06 {
 			String text = scan.nextLine();
 			
 			//배열의 i번째 방에 저장
-			msgs[i] = text;
-			
+			msgs[i] = text;	
 //			System.out.println(msgs[i]);
 //			System.out.println("메소드가 종료되었습니다");
 		}
-		
-		
 		
 		
 		//4. 반복문 돌면서 배열에 저장되었던 모든 문자열을 순서대로 콘솔창에
