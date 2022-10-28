@@ -3,10 +3,12 @@ package test.auto;
 /*
  *  - 접근 지정자 접근범위
  *  
- *  public : 어디에서나 접근 가능
+ *  public : 어디에서나 접근 가능(전체공개)
  *  protected : 동일한 package 혹은 상속관계에서 자식에서 접근가능
- *  default : 동일한 package안에서만 접근가능 (class 앞에 default를 쓰는것이 아닌 접근 지정자를 지우는것) 
+ *  default : 동일한 package안에서만 접근가능 (class 앞에 default를 쓰는것이 아닌 접근 지정자를 지우는것, 비공개) 
  *  private :  동일한 클래스 혹은 동일한 객체 안에서만 접근가능
+ *  (클래스 내부에서만 사용가능하다, 단 클래스가 객체로 생성
+ *  되었을 때 사용이 가능한것  ) 
  *  
  *   - 접근 지정자를 붙이는 위치
  *   
@@ -20,7 +22,7 @@ package test.auto;
  *   
  */
 public class Car {
-	//필드
+	//필드 (메서드에서 사용하기 위해 값을 저장함) 
 	public Engine engine;
 	
 	//Engine 객체를 인자로 전달 받는 생성자

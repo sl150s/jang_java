@@ -17,6 +17,6 @@ public class MainClass06 {
 		//진짜? 엄마 짱이다 나 이제 인터넷한다.
 		p2.doInternet();
 		
-		
+		//오류가 뜬다. 
 	}
 }
