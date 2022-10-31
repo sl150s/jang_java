@@ -36,7 +36,9 @@ public class MainClass05 {
 	
 	
 	public static void main(String[] args) {
+		//☆☆☆ 메소드 호출하면서 static 필드에 미리 준비된 값을 전달하기 
 		useWeapon(w1);
+		
 		//Anonymous Local Inner Class를 이용해서 Weapon type 의 참조값 얻어내
 		useWeapon(new Weapon() {
 			@Override
@@ -45,10 +47,47 @@ public class MainClass05 {
 				System.out.println("다같이 열심히 공격하자");
 			}
 		});
+		//☆☆☆ 메소드 호출하면서 지역변수에 미리 준비된 값 전달하기 
+		useWeapon(w2);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	//☆☆☆ 메소드 호출하면서 값을 즉석에서 만들어서 전달하기 
 	public static void useWeapon(Weapon w) {
 		w.prepare();
 		w.attack();
 	}
+	
+	
+	//////////위의 [메소드 호출하면서 값을 즉석에서 만들어서 전달하기 ] 내용 보충 설명 
+	
+	public void useNum(int num) {}
+	//이 메소드를 호출한다면 useNum(999) 이런 느낌 
+	
+	public void useString(String str) {}
+	//이 메소드를 호출한다면 useString("kim") 이런 느낌 
+	
+	public void useScanner(Scanner s) {}
+	//이 메소드를 호출한다면 useScanner(new Scanner());
+	//스캐너 타입의 참조값을 얻어내는 것. 
+	
+	public void useWeapon(Weapon w) {}
+	//이 메소드를 호출할때는 useWeapon(new Weapon(){});
+	//웨폰 타입의 참조값을 얻어내는 것. 
+	//웨폰타입의 추상 타입이다. 
+	
+	
 }
+
+
+
+
+
+
+
