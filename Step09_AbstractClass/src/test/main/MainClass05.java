@@ -48,7 +48,7 @@ public class MainClass05 {
 			}
 		});
 		//☆☆☆ 메소드 호출하면서 지역변수에 미리 준비된 값 전달하기 
-		useWeapon(w2);
+		//useWeapon(w2);
 	}
 	
 	
@@ -77,7 +77,7 @@ public class MainClass05 {
 	//이 메소드를 호출한다면 useScanner(new Scanner());
 	//스캐너 타입의 참조값을 얻어내는 것. 
 	
-	public void useWeapon(Weapon w) {}
+	//public void useWeapon(Weapon w) {}
 	//이 메소드를 호출할때는 useWeapon(new Weapon(){});
 	//웨폰 타입의 참조값을 얻어내는 것. 
 	//웨폰타입의 추상 타입이다. 
