@@ -1,4 +1,4 @@
-package frame05;
+package frame07;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -12,10 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class MyFrame extends JFrame implements ActionListener{
-	//필드 (저장소) 역할 
-	JButton sendBtn;
-	JButton closeBtn;
-
+	
 	
 	//생성자
 	public MyFrame(String title) {
@@ -32,15 +29,17 @@ public class MyFrame extends JFrame implements ActionListener{
 		setLayout(new FlowLayout());
 		
 		//객체 생성해서 참조값을 필드에 저장 
-		sendBtn = new JButton("전송");
+		JButton sendBtn = new JButton("전송");
 		add(sendBtn);
+		//버튼에 액션 command를 설정
+		sendBtn.setActionCommand("send");
 		
-		closeBtn = new JButton("삭제");
+		
+		JButton closeBtn = new JButton("삭제");
 		add(closeBtn);
+		closeBtn.setActionCommand("delete");
 		
-		//addActionListener라는 인터페이스 안에 actionPerformed 을 오버라이드 해서 
-		// 해당 메소드안에 실행코드를 입력하면 지정한 Component의 액션이 발생 했을때
-		//실행코드가 작동하게 된다.
+		
 		sendBtn.addActionListener(this);
 		closeBtn.addActionListener(this);
 	}
@@ -59,24 +58,16 @@ public class MyFrame extends JFrame implements ActionListener{
 	 * 해당 객체를 활용해서 분기를 하면 된다. 
 	 */
 	
-	//방법 1)))))))))) 필드 생성하고, 필드에 값 저장한 후
-	//getSource(); 이용해서 참조값 불러오기
+	//방법 2)))))))))) getActionCommand 를 이용해서 객체 담기 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//눌러진 버튼의 참조값 얻어내기 
-		Object which = e.getSource();
-		
-		//생성자 안에서 생성된 변수는 지역변수 이기 때문에 다른 클래스에서 사용할 수 없음 
-		if(which == sendBtn) {
-			JOptionPane.showConfirmDialog(this,"전송");
-		}else if(which == closeBtn) {
-			JOptionPane.showConfirmDialog(this,"삭제");
+		//눌러진 버튼의 액션 command 값을 읽어온다. 
+		String command = e.getActionCommand();
+		if(command.equals("send")) {
+			JOptionPane.showMessageDialog(this, "전송합니다");
+		}else if(command.equals("delete")) {
+			JOptionPane.showMessageDialog(this, "삭제 합니다");
 		}
-		 
-		//e의 메소드
-		// 1) .getSource() : 참조값이 전달된다. 
-		
-		
 		
 	}
 	

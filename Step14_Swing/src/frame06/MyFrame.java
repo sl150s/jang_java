@@ -66,7 +66,7 @@ public class MyFrame extends JFrame {
 		ActionListener closeClick = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				// TODO Auto-generated method stubㅋ
 				System.out.println("삭제 버튼을 눌렀네 ");
 				JOptionPane.showConfirmDialog(MyFrame.this, "삭제");
 			}};
@@ -79,7 +79,7 @@ public class MyFrame extends JFrame {
 	
 	public static void main(String[] args) {
 		
-		MyFrame y = new MyFrame("나의 프레임5");
+		MyFrame y = new MyFrame("나의 프레임6");
 		y.setVisible(true);
 		
 	}
