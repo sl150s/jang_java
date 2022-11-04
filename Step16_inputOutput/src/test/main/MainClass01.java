@@ -16,7 +16,7 @@ import java.io.InputStream;
  */
 public class MainClass01 {
 	public static void main(String[] args) {
-		//키보드와 연결된 InputStrem type의 참조값을 kbd라는 지여겹ㄴ수에 담기
+		//키보드와 연결된 InputStrem type의 참조값을 kbd라는 지역변수에 담기
 		//InputStream 객체는 1byte 단위 처리 스트림이다. 
 		//영문자 대소문자, 숫자, 특수문자만 처리할 수 있다
 		// 한글 처리불가 
