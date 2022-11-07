@@ -9,8 +9,8 @@ import test.util.DBConnect;
 public class MainClass09 {
 	public static void main(String[] args) {
 		//추가할 회원의 정보
-		String name="주뎅이";
-		String addr="봉천동";
+		String name="주뎅이2";
+		String addr="봉천동2";
 		
 		//추가할 회원의 정보를 MemberDto 객체에 담아서 
 		MemberDto dto=new MemberDto();
@@ -21,7 +21,7 @@ public class MainClass09 {
 		insert(dto);
 	}
 	
-	//회원 한명의 정보를 추가하는 메소드 만들기
+	//회원 한명의 정보를 추가하는 메소드 만들기(insert)======================================
 	public static void insert(MemberDto dto) {
 		
 		//insert 작업을 위해서 필요한 객체의 참조값을 담을 지역 변수 미리 만들기 

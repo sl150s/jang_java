@@ -3,43 +3,29 @@ package test.main;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import test.dto.MemberDto;
 import test.util.DBConnect;
 
-public class MainClass10 {
+public class Mainclass11 {
 	public static void main(String[] args) {
-		//수정할 회원의 정보
-		int num=1;
-		String name="호빵";
-		String addr="분식집";
-		
-		//MemberDto dto=new MemberDto(num, name, addr);
-		MemberDto dto=new MemberDto();
-		dto.setNum(num);
-		dto.setName(name);
-		dto.setAddr(addr);
-		
-		update(dto);
+		//삭제할 회원의 번호라고 하자
+		int num = 4; 
+		delete(num);
 	}
 	
-	//회원 한명의 정보를 수정하는 메소드(update) =============================================
-	public static void update(MemberDto dto) {
-		//insert 작업을 위해서 필요한 객체의 참조값을 담을 지역 변수 미리 만들기 
+	//인자로 전달한 번호에 해당하는 회원 한 명의 정보를 삭제하는 메소드
+	public static void delete(int num) {
+		//delete 작업을 위해서 필요한 객체의 참조값을 담을 지역 변수 미리 만들기 
 		Connection conn=null;
 		PreparedStatement pstmt=null;
 		try {
 			//Connection 객체의 참조값 얻어오기
 			conn=new DBConnect().getConn();
 			//실행할 미완성의 sql 문
-			String sql="UPDATE member"
-					+ " SET name=?, addr=?"
-					+ " WHERE num=?";
+			String sql="DELETE FROM member WHERE num = ?";
 			//PreparedStatement 객체의 참조값 얻어오기
 			pstmt=conn.prepareStatement(sql);
 			//? 에 값 바인딩하기 
-			pstmt.setString(1, dto.getName());
-			pstmt.setString(2, dto.getAddr());
-			pstmt.setInt(3, dto.getNum());
+			pstmt.setInt(1, num);
 			//sql 문 실행하기
 	        pstmt.executeUpdate();
 	        System.out.println("회원 정보를 수정했습니다.");

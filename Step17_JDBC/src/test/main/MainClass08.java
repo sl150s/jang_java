@@ -23,7 +23,7 @@ public class MainClass08 {
 		insert(map);
 	}
 	
-	//회원 한명의 정보를 추가하는 메소드 만들기
+	//회원 한명의 정보를 추가하는 메소드 만들기(insert)==========================================
 	public static void insert(Map<String, Object> m) {
 		//Map 에 저장된 회원의 이름과 주소를 읽어와서 
 		String name=(String)m.get("name");
