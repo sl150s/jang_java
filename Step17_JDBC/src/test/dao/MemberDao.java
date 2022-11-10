@@ -115,7 +115,7 @@ public class MemberDao {
 			// Connection 객체의 참조값 얻어오기
 			conn = new DBConnect().getConn();
 			// 실행할 미완성의 sql 문
-			String sql = "DELETE FROM member" + "WHERE num=?";
+			String sql = "DELETE FROM member" + " WHERE num=?";
 			// PreparedStatement 객체의 참조값 얻어오기
 			pstmt = conn.prepareStatement(sql);
 			// ? 에 값 바인딩하기
@@ -186,7 +186,7 @@ public class MemberDao {
 				if (conn != null)
 					conn.close();
 			} catch (Exception e) {
-			}
+				}
 		}
 		// 모든 회원의 정보가 누적된 ArrayList 객체의 참조값 리턴해 주기
 		return list;
